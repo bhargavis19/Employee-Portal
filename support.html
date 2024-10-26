@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Portal</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link href="support.css" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//jquerycsvtotable.googlecode.com/files/jquery.csvToTable.js"></script>
+  </head>
+  <body>
+    <nav class="navbar-cont primary-navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+      <ul class="UL">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+      <div class="hamburger primary-hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR MENU -->
+    <div class="menubar primary-menubar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="head-cont">
+        <h2 class="title">SUPPORT TEAMS</h2>
+        <form class="search-form" action="#" method="get">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search here..."
+            id="find"
+            onkeyup="search()"
+          />
+          <img
+            width="20"
+            height="20"
+            src="images/Vector 1.png"
+            alt="search icon"
+            id="toggleSearchIcon"
+          />
+        </form>
+      </div>
+    </div>
+
+    <table id="contactsTable" class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Team Name</th>
+          <th scope="col">Team Department</th>
+          <th scope="col">Team Phone number</th>
+          <th scope="col">Team Email Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td contenteditable="false">John Doe</td>
+          <td contenteditable="false">IT</td>
+          <td contenteditable="false">123</td>
+          <td contenteditable="false">john@gmail.in</td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Mary Williams</td>
+          <td contenteditable="false">Finance</td>
+          <td contenteditable="false">456</td>
+          <td contenteditable="false">mary@gmail.in</td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Peter Jackson</td>
+          <td contenteditable="false">Raw materials</td>
+          <td contenteditable="false">789</td>
+          <td contenteditable="false">peter@gmail.in</td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+
+    <script src="support.js"></script>
+  </body>
+</html>

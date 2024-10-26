@@ -1,0 +1,1413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Portal</title>
+    <link href="portal.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar-cont primary-navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+      <ul class="UL">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+      <div class="hamburger primary-hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR MENU -->
+      <div class="menubar primary-menubar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <div class="profile-container">
+              <a href="#" class="header-navlink">Categories</a>
+              <span class="dropdown-arrow">&#9662;</span>
+            </div>
+              <li class="dropdown-menu">
+                <div><a class="navink-btn category-link" href="#be">Business Excellence</a></div>
+                <div><a class="navink-btn category-link" href="#cq">Compliance / Quality</a></div>
+                <div><a class="navink-btn category-link" href="#corp">Corporate</a></div>
+                <div><a class="navink-btn category-link" href="#digi">Digital (IT / ICoE)</a></div>
+                <div><a class="navink-btn category-link" href="#ehs">EHS</a></div>
+                <div><a class="navink-btn category-link" href="#fina">Finance</a></div>
+                <div><a class="navink-btn category-link" href="#gen">General</a></div>
+                <div><a class="navink-btn category-link" href="#hr">HR / Admin</a></div>
+                <div><a class="navink-btn category-link" href="#land">L&D</a></div>
+                <div><a class="navink-btn category-link" href="#manuf">Manufacturing</a></div>
+                <div><a class="navink-btn category-link" href="#sm">Sales & Marketing</a></div>
+              </li>
+              
+          </li>
+          <li><a href="contacts.html">Contacts</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a id="hr-btn" onclick="toggleHR()" href="#hr">HR Updates</a></li>
+          <li><a onclick="toggleHoliday()" href="#holiday">Holiday Calendar</a></li>
+          <li><a href="#">Profile</a></li>
+          
+        </ul>
+      </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <div class="head-cont">
+        <h1>Employee Portal</h1>
+      </div>
+      <div class="search-toggle">
+        <div class="search-bar-cont">
+          <input
+            class="search"
+            type="text"
+            placeholder="Search here"
+            id="find"
+            onkeyup="search()"
+          />
+        </div>
+        <img
+          width="20"
+          height="20"
+          src="images/Vector 1.png"
+          alt="search icon"
+          id="toggleSearchIcon"
+        />
+      </div>
+    </div>
+
+    <div class="all-content">
+      <div class="navbar2-cont secondary-navbar">
+        <nav class="navbar">
+          <div class="nav-container">
+            <button class="nav-scroll-btn left">&lt;</button>
+            <div class="nav-links-wrapper">
+              <ul class="nav-links">
+                <li>
+                  <a
+                    class="navink-btn active-category"
+                    href="#applicationContainer"
+                    >Favorites</a
+                  >
+                </li>
+                <li>
+                  <a class="navink-btn" href="#be">Business Excellence</a>
+                </li>
+                <li>
+                  <a class="navink-btn" href="#cq">Compliance / Quality</a>
+                </li>
+                <li><a class="navink-btn" href="#corp">Corporate</a></li>
+                <li>
+                  <a class="navink-btn" href="#digi">Digital (IT / ICoE)</a>
+                </li>
+                <li><a class="navink-btn" href="#ehs">EHS</a></li>
+                <li><a class="navink-btn" href="#fina">Finance</a></li>
+                <li><a class="navink-btn" href="#gen">General</a></li>
+                <li><a class="navink-btn" href="#hr">HR / Admin</a></li>
+                <li><a class="navink-btn" href="#land">L&D</a></li>
+                <li><a class="navink-btn" href="#manuf">Manufacturing</a></li>
+                <li><a class="navink-btn" href="#sm">Sales & Marketing</a></li>
+              </ul>
+            </div>
+            <button class="nav-scroll-btn right">&gt;</button>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hr-portal">
+        <div class="appln-cont" id="applicationContainer">
+          <h3 class="mbl-heading">Favorites</h3>
+        </div>
+
+        <div class="appln-cont" id="be">
+          <p class="mbl-heading">Business Excellence</p>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/icons8-manual-64.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">NexAlign</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="bookmark-one"
+                onclick="toggleBookmark('bookmark-one')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="cq">
+          <p class="mbl-heading">Compliance / Quality</p>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/user_reg.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Annexure User Registration</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-1"
+                onclick="toggleBookmark('cq-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+
+          <div class="appln" id="two">
+            <div class="icon-cont">
+              <img class="icon" src="images/audit.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Audit Repository</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-2"
+                onclick="toggleBookmark('cq-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/docs.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">DigiDocs</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-3"
+                onclick="toggleBookmark('cq-3')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="four">
+            <div class="icon-cont">
+              <img class="icon" src="images/form.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Emp Undertaking Form</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-4"
+                onclick="toggleBookmark('cq-4')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/access.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Folder Access Forms</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-17"
+                onclick="toggleBookmark('cq-17')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/icons8-manual-64.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">IM Policy Manual</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-5"
+                onclick="toggleBookmark('cq-5')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/approval.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">IM Policy User Confirmation</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-6"
+                onclick="toggleBookmark('cq-6')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/icons8-manual-64.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">IMS</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-7"
+                onclick="toggleBookmark('cq-7')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/database.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">SAP DB</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-8"
+                onclick="toggleBookmark('cq-8')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/service.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Self Service</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-9"
+                onclick="toggleBookmark('cq-9')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/service_desk.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Service Desk</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="cq-10"
+                onclick="toggleBookmark('cq-10')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="corp">
+          <h3 class="mbl-heading">Corporate</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/app.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">LoopWorks</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-1"
+                onclick="toggleBookmark('corp-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="two">
+            <div class="icon-cont">
+              <img class="icon" src="images/money.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Corporate Treasury</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-2"
+                onclick="toggleBookmark('corp-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/trophy.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">EchoBoard</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-3"
+                onclick="toggleBookmark('corp-3')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/ehs.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">EHS</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-4"
+                onclick="toggleBookmark('corp-4')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/knowledge.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Finance Knowledge Centre</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-5"
+                onclick="toggleBookmark('corp-5')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/forex.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">FleetPilot</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-6"
+                onclick="toggleBookmark('corp-6')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/collab.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Fountain Head</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-7"
+                onclick="toggleBookmark('corp-7')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img
+                class="icon"
+                src="images/logo.png"
+              />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Company Portal</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-8"
+                onclick="toggleBookmark('corp-8')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img
+                class="icon"
+                src="images/cart.png"
+              />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Company Store</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-9"
+                onclick="toggleBookmark('corp-9')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/learn.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Learning Curve</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-10"
+                onclick="toggleBookmark('corp-10')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/collab.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">IT One Collaboration Portal</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-11"
+                onclick="toggleBookmark('corp-11')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/stock.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Stock Plus</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-12"
+                onclick="toggleBookmark('corp-12')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/app.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Tejas</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-13"
+                onclick="toggleBookmark('corp-13')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/email.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Web Mail</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="corp-14"
+                onclick="toggleBookmark('corp-14')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="digi">
+          <h3 class="mbl-heading">Digital (IT / ICoE)</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/password.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">ADS Password Reset/Unlock</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-1"
+                onclick="toggleBookmark('digi-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="two">
+            <div class="icon-cont">
+              <img class="icon" src="images/appsupport.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">App Support</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-2"
+                onclick="toggleBookmark('digi-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/cctv1.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">CCTV Ingate</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-3"
+                onclick="toggleBookmark('digi-3')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="four">
+            <div class="icon-cont">
+              <img class="icon" src="images/cctv.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">CCTV Reception</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-4"
+                onclick="toggleBookmark('digi-4')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/digital.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">DVC Digital Initiative</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-5"
+                onclick="toggleBookmark('digi-5')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/eclaim.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">eClaim</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-6"
+                onclick="toggleBookmark('digi-6')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/TrendSphere.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">TrendSphere</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-7"
+                onclick="toggleBookmark('digi-7')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/icoe.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">ICoE</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-8"
+                onclick="toggleBookmark('digi-8')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/itsupport.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">IT Support</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-9"
+                onclick="toggleBookmark('digi-9')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img
+                class="icon"
+                src="images/database.png"
+              />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">IT</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-10"
+                onclick="toggleBookmark('digi-10')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/onenote.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">OnePoint</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-11"
+                onclick="toggleBookmark('digi-11')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/ops support.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">OPS Support</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-12"
+                onclick="toggleBookmark('digi-12')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/passwordreset.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">SAP Password Unlock/Reset</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-13"
+                onclick="toggleBookmark('digi-13')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/supportt.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">SAP Support</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-14"
+                onclick="toggleBookmark('digi-14')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/transfer.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Secured File Transfer System</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-15"
+                onclick="toggleBookmark('digi-15')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/services.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Service Desk</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="digi-16"
+                onclick="toggleBookmark('digi-16')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="ehs">
+          <h3 class="mbl-heading">EHS</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/vistalink.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Vistalink</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="ehs-1"
+                onclick="toggleBookmark('ehs-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/benchmark.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Benchmark Align</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="ehs-2"
+                onclick="toggleBookmark('ehs-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="fina">
+          <h3 class="mbl-heading">Finance</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/agreement.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Agreement Tracker</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="fina-1"
+                onclick="toggleBookmark('fina-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="two">
+            <div class="icon-cont">
+              <img class="icon" src="images/tracker.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">BG Tracker</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="fina-2"
+                onclick="toggleBookmark('fina-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/bond1.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Bond Tracker</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="fina-3"
+                onclick="toggleBookmark('fina-3')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="four">
+            <div class="icon-cont">
+              <img class="icon" src="images/business.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Business Plan</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="fina-4"
+                onclick="toggleBookmark('fina-4')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/upload.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">TDS Upload</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="fina-5"
+                onclick="toggleBookmark('fina-5')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/web.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">WebRFQ</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="fina-6"
+                onclick="toggleBookmark('fina-6')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="gen">
+          <h3 class="mbl-heading">General</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/Profitedge.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Profit Edge</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="gen-1"
+                onclick="toggleBookmark('gen-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="hr">
+          <h3 class="mbl-heading">HR / Admin</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/Helpdesk.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">HR Helpdesk</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-1"
+                onclick="toggleBookmark('hr-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="two">
+            <div class="icon-cont">
+              <img class="icon" src="images/Canteen Management.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Canteen Management</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-2"
+                onclick="toggleBookmark('hr-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="three">
+            <div class="icon-cont">
+              <img class="icon" src="images/canteen reader.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Canteen Reader</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-3"
+                onclick="toggleBookmark('hr-3')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="four">
+            <div class="icon-cont">
+              <img class="icon" src="images/ERS.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">ERS</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-4"
+                onclick="toggleBookmark('hr-4')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/Guesthouse.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Guest House</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-5"
+                onclick="toggleBookmark('hr-5')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/Holiday.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Holiday List</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-6"
+                onclick="toggleBookmark('hr-6')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/Location1.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">HRMS Location-1</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-7"
+                onclick="toggleBookmark('hr-7')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/Location2.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">HRMS Location-2</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-8"
+                onclick="toggleBookmark('hr-8')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/Location3.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">HRMS Location-3</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-9"
+                onclick="toggleBookmark('hr-9')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln">
+            <div class="icon-cont">
+              <img class="icon" src="images/Location4.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">HRMS Location-4</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="hr-10"
+                onclick="toggleBookmark('hr-10')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="land">
+          <h3 class="mbl-heading">L & D</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/evolvepro.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">EvolvePro</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="land-1"
+                onclick="toggleBookmark('land-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="two">
+            <div class="icon-cont">
+              <img class="icon" src="images/Pathshala.png" />
+            </div>
+            <div class="name-cont">
+              <h4>Pathshala</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="land-2"
+                onclick="toggleBookmark('land-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="manuf">
+          <h3 class="mbl-heading">Manufacturing</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img class="icon" src="images/ESP Req form.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">ESP Req Form</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="manuf-1"
+                onclick="toggleBookmark('manuf-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+          <div class="appln" id="two">
+            <div class="icon-cont">
+              <img class="icon" src="images/syncpath.png" />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">SyncPath</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="manuf-2"
+                onclick="toggleBookmark('manuf-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="appln-cont" id="sm">
+          <h3 class="mbl-heading">Sales & Marketing</h3>
+          <div class="appln" id="one">
+            <div class="icon-cont">
+              <img
+                class="icon"
+                src="images/upload.png"
+              />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Sunday.com</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="sm-1"
+                onclick="toggleBookmark('sm-1')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+
+          <div class="appln" id="two">
+            <div class="icon-cont">
+              <img
+                class="icon"
+                src="images/logo.png"
+              />
+            </div>
+            <div class="name-cont">
+              <h4 class="appln-name">Company Website</h4>
+            </div>
+            <div class="description-cont">
+              <p class="description">Application description goes here...</p>
+              <img
+                class="bookmark-icon"
+                id="sm-2"
+                onclick="toggleBookmark('sm-2')"
+                src="images/Bookmark (2).png"
+                alt="Bookmark"
+              />
+            </div>
+          </div>
+        </div>
+      
+        <div id="search-results" class="search-results-container"></div>
+
+        <div class="hr-section">
+          <div class="hr-cont">
+            <p class="hr-btn">HR Updates</p>
+            <button class="hr-para">View More</button>
+          </div>
+
+          <p class="cal-head">Holiday Calendar</p>
+          <div class="calendar-container" id="calendar-container"></div>
+          <div class="holiday-list" id="holiday-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="portal.js"></script>
+  </body>
+</html>

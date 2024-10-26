@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="hr.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <nav class="navbar-cont primary-navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="logo" />
+    </div>
+    <ul class="UL">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+    <div onclick="toggleNav()" class="hamburger primary-hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR MENU -->
+    <div class="menubar primary-menubar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <div class="profile-container">
+            <a href="#" class="header-navlink">Categories</a>
+            <span class="dropdown-arrow">&#9662;</span>
+          </div>
+            <li class="dropdown-menu">
+              <div><a class="navink-btn" href="#be">Business Excellence</a></div>
+              <div><a class="navink-btn" href="#cq">Compliance / Quality</a></div>
+              <div><a class="navink-btn" href="#corp">Corporate</a></div>
+              <div><a class="navink-btn" href="#digi">Digital (IT / ICoE)</a></div>
+              <div><a class="navink-btn" href="#ehs">EHS</a></div>
+              <div><a class="navink-btn" href="#fina">Finance</a></div>
+              <div><a class="navink-btn" href="#gen">General</a></div>
+              <div><a class="navink-btn" href="#hr">HR / Admin</a></div>
+              <div><a class="navink-btn" href="#land">L&D</a></div>
+              <div><a class="navink-btn" href="#manuf">Manufacturing</a></div>
+              <div><a class="navink-btn" href="#sm">Sales & Marketing</a></div>
+            </li>
+
+        </li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="hr.html">HR Updates</a></li>
+        <li><a href="holiday.html">Holiday Calendar</a></li>
+        <li><a href="#">Profile</a></li>
+
+      </ul>
+    </div>
+  
+  <div class="hr-cont">
+    <p class="hr-btn">HR Updates</p>
+    <button class="hr-para">View More</button>
+
+    <script src="hr.js"></script>
+  </div>
+</body>
+</html>
